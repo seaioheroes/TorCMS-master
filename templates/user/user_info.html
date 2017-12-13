@@ -1,0 +1,31 @@
+{% extends "../theme/bage.html" %}
+{% block typebody %}
+<div class="mtop">
+    <ul class="breadcrumb">
+        <li><a href="/">{{ _('Home') }}</a></li>
+        <li class="active">{{ _('User Info') }}</li>
+    </ul>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><b> {{ _('User Info') }} </b></div>
+    <div class="panel-body">
+        <div id="wiki_cnt">
+            <ul>
+                <li><b>{{ _('User Name') }}</b>：{{ userinfo.user_name }}</li>
+                <li><b>{{ _('Email') }}</b>：{{ userinfo.user_email }}</li>
+                <li><b>{{ _('role') }}</b>：{{ userinfo.role}}</li>
+            </ul>
+        </div>
+        <br>
+        <a href="/user/changepass" class="btn btn-primary">{{ _('Change Password') }}</a>
+        <a href="/user/changeinfo" class="btn btn-primary">{{ _('Modify Personal Information') }}</a>
+        <a href="/user/logout" class="btn btn-primary">{{ _('Logout') }}</a>
+        <br><br>
+        {% if userinfo and userinfo.role[1] >= '1' %}
+        <a href="/post/add_document" class="btn btn-primary">{{ _('Add Document') }}</a>
+        <a href="/user/find" class="btn btn-primary">{{ _('Show All User') }}</a>
+        {% end %}
+    </div>
+</div>
+{% end %}
+

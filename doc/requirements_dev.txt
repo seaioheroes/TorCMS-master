@@ -1,0 +1,25 @@
+# Run with the command:
+# pip install -r requirements.txt
+# pip install -r doc/requirements.txt
+wheel
+beautifulsoup4
+html2text
+jieba
+markdown
+peewee
+Pillow
+tornado
+Whoosh
+WTForms
+wtforms-tornado
+psycopg2
+redis
+pyyaml
+openpyxl
+nose
+requests
+pytest
+coverage
+graphviz
+pylint
+# celery
